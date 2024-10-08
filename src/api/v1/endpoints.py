@@ -21,6 +21,8 @@ from sqlalchemy.orm import Session
 from src.api.v1.utils import get_db, to_pydantic
 from src.forms.login import LoginForm
 
+
+
 router = APIRouter()
 app.include_router(router, prefix="/api/v1")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="api/v1/login")
@@ -188,4 +190,3 @@ async def auth_via_facebook(request: Request):
     token = await oauth.facebook.authorize_access_token(request)
     user_info = await oauth.facebook.get(settings.facebook_userinfo_url, token=token)
     return {"user": user_info.json()}
-

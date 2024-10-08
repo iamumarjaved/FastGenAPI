@@ -41,6 +41,9 @@ class Settings(BaseSettings):
     
     # Database
     database_url: str
+    
+    # Limiter
+    rate_limit: str
 
     class Config:
         env_file = ".env"
