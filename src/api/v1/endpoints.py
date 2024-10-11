@@ -10,7 +10,7 @@ from fastapi.security import OAuth2PasswordBearer
 from fastapi import APIRouter
 from fastapi import APIRouter, HTTPException
 from ...app import app
-from src.core.config import settings 
+from src.core.config.config import settings 
 from fastapi import Request
 from src.auth.oauth2 import oauth
 from src.middleware.role import role_required

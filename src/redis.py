@@ -1,7 +1,7 @@
 from fastapi import HTTPException
 import aioredis
 import logging
-from src.core.config import settings
+from src.core.config.config import settings
 
 # Redis Dependency Class
 class RedisConnection:

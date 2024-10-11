@@ -1,5 +1,5 @@
 from fastapi import Request, HTTPException
-from src.core.config import settings
+from src.core.config.config import settings
 import jwt
 
 def role_required(role: str):

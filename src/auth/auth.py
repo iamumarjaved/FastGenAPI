@@ -1,7 +1,7 @@
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from datetime import datetime, timedelta
-from src.core.config import settings 
+from src.core.config.config import settings 
 
 # Password hashing
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
