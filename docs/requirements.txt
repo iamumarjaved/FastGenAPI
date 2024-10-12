@@ -58,7 +58,7 @@ opentelemetry-exporter-otlp==1.22.0
 opentelemetry-exporter-otlp-proto-common==1.22.0
 opentelemetry-exporter-otlp-proto-grpc==1.22.0
 opentelemetry-exporter-otlp-proto-http==1.22.0
-opentelemetry-instrumentation==0.48b0
+opentelemetry-instrumentation
 opentelemetry-instrumentation-asgi==0.48b0
 opentelemetry-instrumentation-fastapi==0.48b0
 opentelemetry-proto==1.22.0
