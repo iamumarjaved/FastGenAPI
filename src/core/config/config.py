@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from pydantic_settings import BaseSettings
-from src.core.configurations import DevelopmentConfig, TestingConfig, ProductionConfig
+from src.core.config.env_configurations import DevelopmentConfig, TestingConfig, ProductionConfig
 
 
 class Settings(BaseSettings):
@@ -44,6 +44,9 @@ class Settings(BaseSettings):
     
     # Limiter
     rate_limit: str
+    
+    # HyperDX
+    hyperdx_api_key: str
 
     class Config:
         env_file = ".env"
