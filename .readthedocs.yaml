@@ -1,0 +1,38 @@
+# .readthedocs.yaml configuration file
+# Read the Docs configuration for FastGenAPI
+
+version: 2
+
+# Build tools required for the project
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.12"
+
+# Python dependencies required to build the docs
+python:
+  install:
+    - requirements: docs/requirements.txt
+
+# Sphinx project configuration
+sphinx:
+  configuration: docs/conf.py
+
+# Specify the format of the documentation output
+formats:
+  - html
+  - pdf
+  - epub
+
+# Build documentation from Markdown files
+sphinx:
+  builder: sphinx
+  configuration: docs/conf.py
+
+# The documentation to be built from the 'docs' folder
+docs_dir: docs
+
+# The type of repository and the URL of your code repository (optional)
+repository:
+  type: "git"
+  url: "https://github.com/iamumarjaved/FastGenAPI.git"
