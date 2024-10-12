@@ -153,4 +153,3 @@ Contributions are welcome! Please submit a pull request or open an issue if you 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ![PyPI](https://img.shields.io/pypi/v/FastGenAPI)
-![Downloads](https://img.shields.io/pypi/dm/FastGenAPI)
