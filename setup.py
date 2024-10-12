@@ -1,11 +1,12 @@
 from setuptools import setup, find_packages
+from pathlib import Path
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
     
 setup(
     name="FastGenAPI",
-    version="0.1.1",
+    version="0.1.2",
     packages=find_packages(),
     install_requires=[
         "aiocache==0.12.3",
@@ -113,6 +114,8 @@ setup(
     },
     author="Umar Javed",
     description="A FastAPI-based application for dynamic API generation, Db schema visualization, UML ERD class Diagrams generation and more.",
+    long_description=long_description, 
+    long_description_content_type="text/markdown",
     url="https://github.com/iamumarjaved/FastGenAPI",  
     classifiers=[
         "Programming Language :: Python :: 3",
