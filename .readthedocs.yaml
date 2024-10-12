@@ -27,9 +27,6 @@ sphinx:
   configuration: docs/conf.py
   fail_on_warning: true
 
-# The documentation to be built from the 'docs' folder
-doc_path: docs
-
 # The type of repository and the URL of your code repository (optional)
 repository:
   type: "git"
