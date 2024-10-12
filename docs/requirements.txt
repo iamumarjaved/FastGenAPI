@@ -60,7 +60,7 @@ opentelemetry-exporter-otlp-proto-grpc==1.22.0
 opentelemetry-exporter-otlp-proto-http==1.22.0
 opentelemetry-instrumentation==0.43b0 
 opentelemetry-instrumentation-asgi==0.43b0 
-opentelemetry-instrumentation-fastapi==0.48b0
+opentelemetry-instrumentation-fastapi==0.43b0 
 opentelemetry-proto==1.22.0
 opentelemetry-sdk==1.22.0
 opentelemetry-semantic-conventions==0.43b0 
