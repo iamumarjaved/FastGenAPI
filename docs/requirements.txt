@@ -58,14 +58,14 @@ opentelemetry-exporter-otlp==1.22.0
 opentelemetry-exporter-otlp-proto-common==1.22.0
 opentelemetry-exporter-otlp-proto-grpc==1.22.0
 opentelemetry-exporter-otlp-proto-http==1.22.0
-opentelemetry-instrumentation==0.43b0  # Specify the version to match dependencies
-opentelemetry-instrumentation-asgi==0.43b0  # Downgrade to match hyperdx-opentelemetry
+opentelemetry-instrumentation==0.43b0 
+opentelemetry-instrumentation-asgi==0.43b0 
 opentelemetry-instrumentation-fastapi==0.48b0
 opentelemetry-proto==1.22.0
 opentelemetry-sdk==1.22.0
-opentelemetry-semantic-conventions==0.48b0
+opentelemetry-semantic-conventions==0.43b0 
 opentelemetry-util-http==0.48b0
-hyperdx-opentelemetry==0.1.0  # Ensure this is included
+hyperdx-opentelemetry==0.1.0
 orjson==3.10.7
 packaging==24.1
 passlib==1.7.4
