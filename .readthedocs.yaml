@@ -20,9 +20,9 @@ sphinx:
 
 # Specify the format of the documentation output
 formats:
-  - html
-  - pdf
-  - epub
+  htmlzip: true
+  pdf: true
+  epub: true
 
 # Build documentation from Markdown files
 sphinx:
