@@ -29,5 +29,4 @@ sphinx:
 
 # The type of repository and the URL of your code repository (optional)
 repository:
-  type: "git"
   url: "https://github.com/iamumarjaved/FastGenAPI.git"
