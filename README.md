@@ -1,119 +1,153 @@
-FastGenAPI
-==========
 
-Overview
---------
+# FashGenAPI
 
-**FastAPI-ERD-AutoDoc** is a dynamic package designed to enhance your FastAPI development experience by automatically generating Entity Relationship Diagrams (ERDs), class diagrams, and documentation for your APIs. This package ensures that every aspect of your FastAPI project is visualized and documented without manual setup, making it easier to manage large-scale applications.
+**FashGenAPI** is a versatile package designed to simplify and accelerate your FastAPI project development. It provides essential tools for automatic generation of project structure, models, endpoints, documentation, diagrams, and database management, all integrated into a single command-line interface (CLI).
 
-Features
---------
+## Features
 
-*   **ERD Generation**: Automatically generate Entity Relationship Diagrams (ERDs) from your SQLAlchemy models and database schema.
-    
-*   **Class Diagrams**: Generate class diagrams using PlantUML for better visualization of your code architecture.
-    
-*   **Mermaid.js Diagrams**: Create Mermaid.js-based diagrams for easy integration into Markdown or static sites.
-    
-*   **Graphviz Integration**: Use Graphviz to generate and visualize complex relationships.
-    
-*   **Automated Documentation**: Provides Swagger and Redoc integration for real-time documentation of your FastAPI endpoints.
-    
+### 1. Auto-Generated Documentation
+- **Swagger & ReDoc**: Automatically integrates Swagger UI and ReDoc for easy API documentation.
+- **Custom Templates**: Customize the look and feel of your API documentation with predefined templates.
+- **Real-time updates**: Auto-generates documentation when project components are modified.
 
-Installation
-------------
+### 2. Authentication and Authorization
+- **JWT-based Authentication**: Built-in support for JWT (JSON Web Token) to secure your API.
+- **OAuth2**: Easily integrate OAuth2 for external authentication providers.
+- **Role-based Access Control (RBAC)**: Predefined user roles and permissions for easy management of access levels.
 
-To install the package, run the following command:
+### 3. Database Migrations and ORM Integration
+- **SQLAlchemy**: Integrated SQLAlchemy ORM for smooth database interaction.
+- **Alembic Migrations**: Auto-generate database migration scripts.
+- **Multiple Database Support**: Configure PostgreSQL, SQLite, or other databases with ease.
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopy codepip install FastAPI-ERD-AutoDoc   `
+### 4. Auto-Generate ERD (Entity-Relationship Diagrams)
+- Automatically generate ERD diagrams from SQLAlchemy models or directly from your database schema using ERAlchemy.
+  
+### 5. Class Diagram Generation (UML)
+- Automatically generate class diagrams using PlantUML.
 
-Ensure that required dependencies such as Graphviz, PlantUML, and Mermaid.js are installed automatically by the package.
+### 6. Mermaid.js Diagram Generation
+- Generate flowcharts and other diagrams using Mermaid.js via CLI.
 
-Getting Started
----------------
+### 7. API Endpoint and Model Generation
+- **Custom Endpoints**: Automatically generate new FastAPI endpoints with a simple command.
+- **SQLAlchemy Models**: Generate basic SQLAlchemy models with one command.
 
-After installation, you can generate diagrams and documentation with just a few commands.
+---
 
-### Example 1: Generating ERD from Models
+## Installation
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopy codepython manage.py auto-generate-erd   `
+1. Install the package using pip:
+    ```bash
+    pip install fastapi-boilerplate-generator
+    ```
 
-This command generates an ERD diagram from your SQLAlchemy models and saves it as schema\_erd.pdf.
+2. Install the dependencies from `requirements.txt`:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-### Example 2: Generating ERD from Database Schema
+---
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopy codepython manage.py generate-erd   `
+## CLI Usage
 
-It fetches the ERD directly from your PostgreSQL database schema and outputs the diagram in erd\_from\_db.pdf.
+### Run the FastAPI Server
+```bash
+python manage.py runserver
+```
 
-### Example 3: Generating Class Diagrams with PlantUML
+### Create a New Endpoint
+```bash
+python manage.py create-endpoint <endpoint_name>
+```
+- Example:
+    ```bash
+    python manage.py create-endpoint users
+    ```
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopy codepython manage.py generate-class-diagram   `
+### Create a New SQLAlchemy Model
+```bash
+python manage.py create-model <model_name>
+```
+- Example:
+    ```bash
+    python manage.py create-model User
+    ```
 
-This command generates a class diagram using PlantUML and outputs it as class\_diagram.png.
+### Database Migrations
+```bash
+python manage.py makemigrations
+```
 
-### Example 4: Generating Mermaid.js Diagrams
+### Generate ERD from SQLAlchemy Models
+```bash
+python manage.py auto-generate-erd
+```
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopy codepython manage.py generate-mermaid-diagram   `
+### Generate Class Diagrams
+```bash
+python manage.py generate-class-diagram
+```
 
-This command generates Mermaid.js-based diagrams in diagram.png for easy visualization.
+### Generate Diagrams using Mermaid.js
+```bash
+python manage.py generate-mermaid-diagram
+```
 
-Requirements
-------------
+---
 
-Ensure the following dependencies are installed:
+## Examples
 
-*   Python 3.7+
-    
-*   SQLAlchemy
-    
-*   ERAlchemy
-    
-*   PlantUML (for class diagrams)
-    
-*   Graphviz (for relationship diagrams)
-    
-*   Mermaid CLI (for Mermaid.js diagrams)
-    
+### Example of Generated Endpoint (`users.py`)
+```python
+from fastapi import APIRouter
 
-Install them via the requirements.txt or manually as needed.
+router = APIRouter()
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopy codepip install -r requirements.txt   `
+@router.get("/")
+async def get_users():
+    return {"message": "Users endpoint working"}
+```
 
-Usage
------
+### Example of Generated SQLAlchemy Model (`user.py`)
+```python
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 
-### Generate Endpoints Dynamically
+Base = declarative_base()
 
-Use the CLI to create FastAPI endpoints quickly:
+class User(Base):
+    __tablename__ = 'users'
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+```
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`bashCopy codepython manage.py create-endpoint` 
+---
 
-This creates a new FastAPI endpoint in src/api/v1/endpoints/.py.
+## Configuration
 
-### Generate Models Dynamically
+### Database Configuration
+You can configure your database connection inside your FastAPI app:
+```python
+DATABASE_URL = "postgresql+psycopg2://username:password@localhost/dbname"
+```
 
-You can also create SQLAlchemy models with a single command:
+### JWT Configuration
+To secure your API with JWT, define your secret key and expiration inside your configuration file:
+```python
+JWT_SECRET = "your_jwt_secret"
+JWT_ALGORITHM = "HS256"
+JWT_EXPIRATION_TIME_MINUTES = 30
+```
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`bashCopy codepython manage.py create-model` 
+---
 
-This creates a new SQLAlchemy model in src/models/.py.
+## Contributing
 
-Contributing
-------------
+Contributions are welcome! Please submit a pull request or open an issue if you find any bugs or want to suggest new features.
 
-We welcome contributions! To contribute to the project, follow these steps:
+---
 
-1.  Fork the repository.
-    
-2.  Create a new branch for your feature or bug fix.
-    
-3.  Write tests for your changes.
-    
-4.  Submit a pull request with a detailed explanation.
-    
+## License
 
-License
--------
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
