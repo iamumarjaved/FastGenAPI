@@ -19,10 +19,7 @@ sphinx:
   configuration: docs/conf.py
 
 # Specify the format of the documentation output
-formats:
-  htmlzip: true
-  pdf: true
-  epub: true
+formats: all
 
 # Build documentation from Markdown files
 sphinx:
