@@ -27,6 +27,3 @@ sphinx:
   configuration: docs/conf.py
   fail_on_warning: true
 
-# The type of repository and the URL of your code repository (optional)
-repository:
-  url: "https://github.com/iamumarjaved/FastGenAPI.git"
