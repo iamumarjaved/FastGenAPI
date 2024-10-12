@@ -64,7 +64,7 @@ opentelemetry-instrumentation-fastapi==0.48b0
 opentelemetry-proto==1.22.0
 opentelemetry-sdk==1.22.0
 opentelemetry-semantic-conventions==0.43b0 
-opentelemetry-util-http==0.48b0
+opentelemetry-util-http==0.43b0 
 hyperdx-opentelemetry==0.1.0
 orjson==3.10.7
 packaging==24.1
